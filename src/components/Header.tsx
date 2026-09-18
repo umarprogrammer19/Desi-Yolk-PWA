@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, Search, ShoppingBasket, User, X } from "lucide-react";
 import { Logo } from "./Logo";
+import { InstallPrompt } from "./InstallPrompt";
 import { useCart } from "@/lib/cart-context";
 
 const NAV_LINKS = [
@@ -53,6 +54,7 @@ export function Header() {
           >
             <Search size={19} />
           </button>
+          <InstallPrompt />
           <Link
             href="/profile"
             className="hidden items-center gap-1.5 rounded-full px-3 py-2 text-sm font-medium text-forest hover:bg-leaf-light/60 sm:flex"
